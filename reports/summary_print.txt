@@ -1,0 +1,14 @@
+checked reflected XSS in https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/: 
+The url we got: https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/?search=1KSH9IHM, the url we entered: https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/, the values: {'search': '1KSH9IHM'}
+┌─────┬───────┬─────────┬────────────────┬─────────┐
+│ tag │ input │ encoded │ double encoded │ alerted │
+├─────┼───────┼─────────┼────────────────┼─────────┤
+└─────┴───────┴─────────┴────────────────┴─────────┘
+checked reflected XSS in https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/post?postId=3: 
+The postId parameter does not affect the web code.
+The url we got: https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/post/comment/confirmation?postId=3, the url we entered: https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/post?postId=3, the values: {'csrf': 'CrdjeEXgBhgmfahrrQL3sRmGh6DfKT7i', 'postId': '3', 'name': '3UWLYCBH', 'email': 'SNRHAI8A@gmail.com', 'website': 'https:kUQjbW R}^@/5[rwyi<!w DtUUA46b<xaV3Wf_><C*b"6pX8EX"qp>JZNd\x0b|]0XZP%X B-()V\rdS^$+t', 'comment': 'CKXB4K6D'}
+found 3 in https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/post?postId=3. we entered it in postId tag.
+found 3UWLYCBH in https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/post?postId=3. we entered it in name tag.
+found CKXB4K6D in https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/post?postId=3. we entered it in comment tag.
+
+[EXCEPTION] unable to render bool; a string or other renderable object is required

@@ -1,0 +1,79 @@
+<!doctype html><html lang="he" dir="rtl"><base href="/nidp/GOV/"/><head><meta charset="utf-8"/><link rel="shortcut icon" href="/nidp/GOV/favicon.ico"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><link rel="manifest" href="/nidp/GOV/manifest.json"/><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/><link rel="stylesheet" href="" custom/><link rel="canonical" href="https://login.gov.il"/><script>rtl=null</script><script src="./lib/fetch.js"></script><script src="./lib/jquery-3.6.0.min.js"></script><script src="./translations/translation.js"></script><script src="/nidp/GOV/vendor/jsrsasign-all-min.js"></script><script src="/nidp/GOV/vendor/x509-1.1.js"></script><script src="/nidp/GOV/vendor/asn1-1.0.js"></script><script src="/nidp/GOV/vendor/asn1hex-1.1.js"></script><script src="/nidp/GOV/vendor/asn1x509-1.0.js"></script><script>
+    
+    _siteSettings = {
+        "langs": ["he","en","ar","ru"],
+        "govCookieDomain": "login.gov.il",
+        "glassboxSrc": "https://cdn.gbqofs.com/govi/generic/detector-dom.min.js",
+        "glassBoxScript": "https://report.govi.gbqofs.io/reporting/e6c87716-3101-0a67-315e-793e6995cd99/cls_report;recordErrors=true;recordScrolls=true;recordMouseMoves=true;valueMaskingMode=whitelist;ajaxRecordRequestBody=never;ajaxRecordResponseBody=tld;enabledByChance=1;",
+        "govCookieName": "_govLang_2",
+        "successMessageShowTimeout": "2500",
+        "recaptchaSiteKey": "6LdKAX8UAAAAAOL-Lbl2bFgnSyXSeWU_9ceWtmWf",
+        "forgottenPasswordLink": "https://account.gov.il/sspr/public/forgottenpassword",
+        "signupLink": "https://account.gov.il/sspr/public/newuser",
+        "signupLinkBiometricP": "https://account.gov.il/sspr/public/newuser?biometricIdentification",
+        "faqLink": "https://www.gov.il/he/departments/faq/signup_sso_faq",
+        "aboutLink": "https://www.gov.il/he/general/aboutus",
+        "legalTermsLink": "https://www.gov.il/he/general/terms_of_use",
+        "userManualLink": "#",
+        "movieLink": "https://www.youtube.com/channel/UCEflHGPEj-M7jtQ0PdzUZkQ",
+        "isrealEIDSmartCardAgentDownloadLink": "/nidp/images/SmartCardAgents/IDM_and_ID_Install.exe",
+        "termsOfUseLink": "https://www.gov.il/he/general/terms_of_use",
+        "callCenterLink": "https://www.gov.il/he/departments/central-government-call-center",
+        "facebookLink": "https://www.facebook.com/israelgov/",
+        "accessibilityLink" : "https://www.gov.il/he/general/accessibility_statement",
+        "validIssuers": {
+            "ISRAEL_EID_ISSUERS": "/C=IL/O=Government of Israel/OU=Population and Immigration Authority/CN=Residents eID CA 12-01",
+            "TAMUZ_CARD_ISSUERS": "/C=IL/O=Government of Israel/CN=TAMUZ-Employees CA G2",
+            "COMSIGN_CARD_ISSUERS": "/C=IL/O=ComSign Ltd./CN=ComSign Corporations CA",
+            "COMSIGN_CARD_ISSUERS2": "/C=IL/O=ComSign Ltd./CN=ComSign Professionals CA",
+            "PERSONALID_CARD_ISSUERS": "/C=IL/O=PersonalID Ltd./OU=Certificate Services/CN=PersonalID Supervised Operational CA 2011"
+        },
+	"passkeyManagementPortal": "https://passkey.login.gov.il/idss/webauthn"
+    }
+
+    _loginTypeSMSOTP = "smsOTP";
+    _loginTypeSMSOTPSmartphoneEnrollment = "smsOTPSmartphoneEnrollment";
+    _loginTypeSmartphoneOTP = "smartPhoneOTP";
+    _loginTypeIsraelDigitalIDCard = "israelDigitalIDCard";
+    _loginTypePki = "pki";
+	_loginTypePkiTamuz = "pkiTamuz";
+	_loginTypePkiComsign = "pkiComsign";
+	_loginTypePkiPersonalID = "pkiPersonalID";
+    _loginTypeLoa4Landing = "loa4Landing";
+    _loginTypeWebAuthn = "webauthn";
+    _loginTypePreRegCheck = "preRegCheck";
+    _errorPageType = "errorPage";
+    _loginType = "smsOTP";
+    _serverUrl = 'https://login.gov.il/nidp/app/login?sid=0&sid=0';
+    _loginMethodSmsOtpUrl = window.location.href.replace(/id=\w+/, "id=usernamePasswordSMSOtp");
+    _loginMethodSmartphoneOtpUrl = window.location.href.replace(/id=\w+/, "id=smartphoneOtp");
+    _loginMethodIsraelSmartCardUrl = window.location.href.replace(/id=\w+/, "id=israeliIDCard");
+    _loginMethodComsignCardUrl = window.location.href.replace(/id=\w+/, "id=ComsignCard");
+    _loginMethodPersonalIDCardUrl = window.location.href.replace(/id=\w+/, "id=PersonalIDCard");
+    _loginMethodTamuzCardUrl = window.location.href.replace(/id=\w+/, "id=TamuzCard");
+    _loginMethodPkiUrl = window.location.href.replace(/id=\w+/, "id=pki");
+	_loginMethodPkiTamuzUrl = window.location.href.replace(/id=\w+/, "id=pkiTamuz");
+	_loginMethodPkiPersonalIDUrl = window.location.href.replace(/id=\w+/, "id=pkiPersonalID");
+	_loginMethodPkiComsignUrl = window.location.href.replace(/id=\w+/, "id=pkiComsign");
+    _loginMethodLoa4LandingUrl = window.location.href.replace(/id=\w+/, "id=LOA4Landing");
+    _loginMethodWebauthnUrl = window.location.href.replace(/id=\w+/, "id=webauthn");
+    _loginMethodPreRegCheckUrl = window.location.href.replace(/id=\w+/, "id=preRegCheck");
+    _smartphoneEnrollmentUrl = "https://account.gov.il/idss"
+    _shouldSolveCaptcha = true;
+    _HomePageURL = "https://www.gov.il";
+    _curLang = "he";
+    _target = "";
+    var linkTarget = _target;
+    if (_target == null || _target.trim().length == 0){
+        linkTarget  = window.location.toString();
+	_target = "https://my.gov.il/sec";
+    }
+    linkTarget = linkTarget.replace("preRegCheck","usernamePasswordSMSOtp");
+
+    _siteSettings.forgottenPasswordLink += "?forwardURL=" + encodeURIComponent(linkTarget);
+    _siteSettings.signupLink += "?forwardURL=" + encodeURIComponent(linkTarget);
+    _smartphoneEnrollmentUrl += "?target=" + encodeURIComponent(linkTarget);
+    _errorKey = "SYSTEM_ERROR";	
+    _loa = "3";
+</script>
+<title></title><script>if(""!=_siteSettings.glassBoxScript){var head=document.getElementsByTagName("head")[0],script=document.createElement("script");script.type="text/javascript",script.id="_cls_detector",script.setAttribute("src",_siteSettings.glassboxSrc),script.setAttribute("data-clsconfig","reportURI="+_siteSettings.glassBoxScript),script.async=!0,head.appendChild(script)}</script><script defer="defer" src="/nidp/GOV/static/js/main.6e2270b3.js"></script><link href="/nidp/GOV/static/css/main.686fc23d.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app 11.</noscript><div id="overlays"></div><div id="root"></div><div id="recaptcha-container" style="display:none" class="g-recaptcha" data-size="invisible"></div></body></html>

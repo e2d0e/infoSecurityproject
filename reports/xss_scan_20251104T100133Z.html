@@ -1,0 +1,14 @@
+<!doctype html><meta charset='utf-8'><title>XSS Scan Report</title>
+<style>body{font-family:Arial;padding:16px}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:6px}th{background:#f2f2f2}</style>
+<h1>XSS Scan Report</h1><div>Seed: https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/ | Generated: 20251104T100133Z</div>
+<h2>Table 1. Sample of a generated report</h2>
+<table><thead><tr><th>No</th><th>Registration Date</th><th>Title</th><th>URL</th><th>XSS</th><th>Verify</th></tr></thead><tbody>
+<tr><td>1</td><td>2025-11-04 10:01:33</td><td>Reflected XSS into HTML context with nothing encoded</td><td>https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/?search=F4YLNTG6</td><td>Yes</td><td>Yes</td></tr>
+</tbody></table>
+<h3>Discovered vulnerabilities</h3><ol>
+<li>Reflected XSS via <script> (client alert observed).</li>
+</ol>
+<div><strong>Total found on page:</strong> 1</div>
+<h3>Recommendations</h3><ul>
+<li>Apply strict server-side validation and context-aware output encoding (HTML/Attr/URL/JS).</li>
+</ul>

@@ -1,0 +1,26 @@
+{
+  "generated": "20251104T100133Z",
+  "seed": "https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/",
+  "table1_rows": [
+    {
+      "No": 1,
+      "RegistrationDate": "2025-11-04 10:01:33",
+      "Title": "Reflected XSS into HTML context with nothing encoded",
+      "URL": "https://0a66008a03a4cdbf802b49c600f8004c.web-security-academy.net/?search=F4YLNTG6",
+      "XSS": "Yes",
+      "Verify": "Yes",
+      "kind": "reflected-script",
+      "details": {
+        "param": "search",
+        "payload": "<script>alert(1)</script>",
+        "encoding": "none"
+      }
+    }
+  ],
+  "discovered_vulnerabilities": [
+    "Reflected XSS via <script> (client alert observed)."
+  ],
+  "recommendations": [
+    "Apply strict server-side validation and context-aware output encoding (HTML/Attr/URL/JS)."
+  ]
+}

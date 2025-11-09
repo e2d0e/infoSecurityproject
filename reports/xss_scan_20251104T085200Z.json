@@ -1,0 +1,100 @@
+{
+  "generated": "20251104T085200Z",
+  "seed": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/",
+  "results": [
+    {
+      "page": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/",
+      "seed": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/",
+      "reflected": [],
+      "stored": [
+        {
+          "final_url": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/?search=VZ6URQY1",
+          "original_url": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/",
+          "values": {
+            "search": "VZ6URQY1"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "page": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/post?postId=5",
+      "seed": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/",
+      "reflected": [],
+      "stored": [
+        {
+          "final_url": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/post/comment/confirmation?postId=5",
+          "original_url": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/post?postId=5",
+          "values": {
+            "csrf": "SbhHpSu2zKNAtyHGNoXaI7NwhjaulkPr",
+            "postId": "5",
+            "name": "0VCYAK87",
+            "email": "TF1ITP80@gmail.com",
+            "website": "https:8oHe~k'Y^B4+0dJ8=r3|}\rt`m(HtU%U)N6PrRzfz RWpHQGir3\tTW*Y#JSWE1@L6/`nA1; /G1sOv<^vj\"oRU}`s|<>'2 / I",
+            "comment": "RGNETVXO"
+          },
+          "fields": [
+            {
+              "field": "postId",
+              "value": "5",
+              "reflected": true,
+              "alerted": false,
+              "encoding": null,
+              "double_encoded": false
+            },
+            {
+              "field": "name",
+              "value": "0VCYAK87",
+              "reflected": true,
+              "alerted": false,
+              "encoding": null,
+              "double_encoded": false
+            },
+            {
+              "field": "comment",
+              "value": "RGNETVXO",
+              "reflected": true,
+              "alerted": false,
+              "encoding": null,
+              "double_encoded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/?search=AN5EP0HI",
+      "seed": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/",
+      "reflected": [
+        {
+          "page": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/?search=AN5EP0HI",
+          "reflections": [
+            {
+              "param": "search",
+              "payload": "<script>alert(1)</script>",
+              "alerted": true,
+              "encoding": "none",
+              "notes": ""
+            }
+          ]
+        }
+      ],
+      "stored": [
+        {
+          "final_url": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/?search=BOE553JC",
+          "original_url": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/?search=AN5EP0HI",
+          "values": {
+            "search": "BOE553JC"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "page": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/post/comment/confirmation?postId=5",
+      "seed": "https://0aa8005e0494188180fdbc7a00ed00d3.web-security-academy.net/",
+      "reflected": [],
+      "stored": []
+    }
+  ]
+}
